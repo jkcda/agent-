@@ -107,6 +107,13 @@ class ProviderManager {
     await updateSetting('CAPABILITY_RERANK', JSON.stringify(merged))
   }
 
+  /** 智谱等 API 已含版本号（/v4），OpenAI/DeepSeek 需补 /v1 */
+  private normalizeBaseURL(baseURL: string): string {
+    const url = baseURL.replace(/\/+$/, '')
+    if (/\/v\d+$/.test(url)) return url
+    return url + '/v1'
+  }
+
   // ═══════════════════════════════════════════════
   //  SDK 客户端工厂（基于能力配置）
   // ═══════════════════════════════════════════════
@@ -134,7 +141,7 @@ class ProviderManager {
     return new ChatOpenAI({
       model: cfg.model,
       apiKey: cfg.apiKey,
-      configuration: { baseURL: cfg.baseURL + '/v1' },
+      configuration: { baseURL: this.normalizeBaseURL(cfg.baseURL) },
       maxTokens: config.ai.maxTokens,
       temperature: 0.7,
       modelKwargs: {
@@ -147,7 +154,7 @@ class ProviderManager {
   /** 创建 OpenAI SDK 客户端（用于 embedding，基于向量化配置） */
   createOpenAIClient(): OpenAI {
     const cfg = this.getEmbeddingConfig()
-    return new OpenAI({ apiKey: cfg.apiKey, baseURL: cfg.baseURL + '/v1' })
+    return new OpenAI({ apiKey: cfg.apiKey, baseURL: this.normalizeBaseURL(cfg.baseURL) })
   }
 
   // ═══════════════════════════════════════════════
@@ -197,7 +204,7 @@ class ProviderManager {
       : messages
     const body = this.buildRequestBody(cfg, apiMessages, true, { model: cfg.model })
 
-    const resp = await fetch(`${cfg.baseURL}/v1/chat/completions`, {
+    const resp = await fetch(`${this.normalizeBaseURL(cfg.baseURL)}/chat/completions`, {
       method: 'POST',
       headers: {
         'Authorization': `Bearer ${cfg.apiKey}`,
@@ -264,7 +271,7 @@ class ProviderManager {
 
     if (cfg.format === 'openai' || cfg.requestTemplate) {
       const body = this.buildRequestBody(cfg, messages, false, { model: cfg.model, max_tokens: maxTokens })
-      const resp = await fetch(`${cfg.baseURL}/v1/chat/completions`, {
+      const resp = await fetch(`${this.normalizeBaseURL(cfg.baseURL)}/chat/completions`, {
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${cfg.apiKey}`,
