@@ -1,0 +1,734 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic:
+      - link "Skip to main content" [ref=e3] [cursor=pointer]:
+        - /url: "#main-content"
+      - link "Skip to footer" [ref=e4] [cursor=pointer]:
+        - /url: "#footer"
+    - generic [ref=e5]:
+      - link "Home" [ref=e6] [cursor=pointer]:
+        - /url: /
+        - img [ref=e7]
+      - generic [ref=e9]:
+        - navigation [ref=e10]:
+          - list [ref=e11]:
+            - listitem [ref=e12] [cursor=pointer]:
+              - link "Research" [ref=e13]:
+                - /url: /research
+            - listitem [ref=e14] [cursor=pointer]:
+              - link "Policy" [ref=e15]:
+                - /url: /policy
+            - listitem [ref=e16] [cursor=pointer]:
+              - button "Commitments" [ref=e17]:
+                - generic [ref=e18]: Commitments
+                - img [ref=e19]
+            - listitem [ref=e21] [cursor=pointer]:
+              - button "Learn" [ref=e22]:
+                - generic [ref=e23]: Learn
+                - img [ref=e24]
+            - listitem [ref=e26] [cursor=pointer]:
+              - link "News" [ref=e27]:
+                - /url: /news
+        - generic [ref=e28]:
+          - link "Try Claude" [ref=e29] [cursor=pointer]:
+            - /url: https://claude.ai/
+          - img [ref=e31] [cursor=pointer]
+  - main [ref=e33]:
+    - article [ref=e34]:
+      - generic [ref=e35]:
+        - generic [ref=e36]:
+          - generic [ref=e38]: Announcements
+          - heading "Claude Fable 5 and Claude Mythos 5" [level=1] [ref=e39]
+          - generic [ref=e40]: 2026年6月9日
+        - img "The number five composed of several butterflies" [ref=e42]
+      - article [ref=e44]:
+        - generic [ref=e46]:
+          - paragraph [ref=e47]:
+            - text: Today we’re launching
+            - strong [ref=e48]: Claude Fable 5
+            - text: ": a Mythos-class"
+            - superscript [ref=e49]: "1"
+            - text: model that we’ve made safe for general use.
+          - paragraph [ref=e50]: Fable 5’s capabilities exceed those of any model we’ve ever made generally available. It is state-of-the-art on nearly all tested benchmarks of AI capability, showing exceptional performance in software engineering, knowledge work, vision, scientific research, and many other areas. The longer and more complex the task, the larger Fable 5’s lead over our other models.
+          - paragraph [ref=e51]: Releasing a model this capable comes with risks. Without safeguards, Fable 5’s capabilities in areas like cybersecurity could be misused to cause serious damage. We’ve therefore launched the model with safeguards that mean queries on some topics will instead receive a response from our next-most-capable model, Claude Opus 4.8. To release the model both safely and quickly, we’ve tuned these safeguards conservatively—they’ll sometimes catch harmless requests, though they trigger, on average, in less than 5% of sessions. With more capable models arriving in the coming months, we’re working to improve our safeguards and reduce false positives as quickly as we can.
+          - paragraph [ref=e52]:
+            - text: For a small group of cyberdefenders and infrastructure providers, we’re also launching
+            - strong [ref=e53]: Claude Mythos 5
+            - text: . It’s the same underlying model as Fable 5, but with the safeguards lifted in some areas.
+            - superscript [ref=e54]: "2"
+            - text: Mythos 5 will initially be deployed through
+            - link "Project Glasswing" [ref=e55] [cursor=pointer]:
+              - /url: https://www.anthropic.com/glasswing
+            - text: ", in collaboration with the US government, as an upgrade to Claude Mythos Preview. It has the strongest cybersecurity capabilities of any model in the world. Soon, we intend to expand access to Mythos 5 through a broader trusted access program."
+          - paragraph [ref=e56]:
+            - text: The capabilities of models like Fable 5 and Mythos 5 have the potential to do profound good for the world. We’ve seen the beginnings of this in Project Glasswing, where the models have
+            - link "helped cyber defenders" [ref=e57] [cursor=pointer]:
+              - /url: https://www.anthropic.com/research/glasswing-initial-update
+            - text: secure critically important software. We’ve also seen it in life sciences research, where the models are positing novel hypotheses and speeding up the development of new therapeutics.
+          - paragraph [ref=e58]: Fable 5 and Mythos 5 are being offered at $10 per million input tokens and $50 per million output tokens—less than half the price of Claude Mythos Preview. Today’s joint launch is another step towards our goal of bringing advanced AI capabilities to as many users as possible, as quickly and as safely as we can.
+          - heading "Evaluating Claude Fable 5 and Claude Mythos 5" [level=2] [ref=e59]
+          - paragraph [ref=e60]: The table below compares the capabilities of Fable 5 and Mythos 5 to other leading models.
+          - figure [ref=e62]:
+            - img "Benchmark table showing Claude Fable and Mythos compared to other leading models" [ref=e63]
+          - paragraph [ref=e64]: Fable 5 and Mythos 5 can work autonomously for longer than any previous Claude models. Below we discuss how these skills apply to software engineering, and cover the model’s improved capabilities in knowledge work, vision, memory, and life sciences research.
+          - paragraph [ref=e65]:
+            - emphasis [ref=e66]: Software engineering.
+            - text: During early testing,
+            - link "Stripe" [ref=e67] [cursor=pointer]:
+              - /url: https://stripe.com/
+            - text: "reported that Fable 5 compressed months of engineering into days. In a 50-million-line Ruby codebase, the model performed a codebase-wide migration in a day that would otherwise have taken a whole team over two months by hand. Fable 5 is also more token-efficient than past Claude models: on Cognition’s"
+            - link "FrontierCode" [ref=e68] [cursor=pointer]:
+              - /url: https://cognition.ai/blog/frontier-code
+            - text: evaluation, which tests whether models can pass difficult coding tasks while meeting the standards of high-quality production codebases, Fable 5 scores highest among frontier models, even at medium effort.
+          - figure [ref=e70]:
+            - img [ref=e71]
+          - figure [ref=e73]:
+            - img [ref=e74]
+          - paragraph [ref=e75]:
+            - emphasis [ref=e76]: Knowledge work
+            - text: . Fable 5 shows strong performance on complex analytical tasks. On
+            - link "Hebbia" [ref=e77] [cursor=pointer]:
+              - /url: https://www.hebbia.com/
+            - text: ’s Finance Benchmark for senior-level reasoning, Fable 5 has the highest score of any model, with substantial gains in document-based reasoning, chart and table interpretation, and problem solving.
+            - link "IMC" [ref=e78] [cursor=pointer]:
+              - /url: https://www.imc.com/
+            - text: noted that Fable 5 aced their trading-analysis evaluations nearly across the board, including factual lookup, conceptual reasoning, root-cause analysis, and expected-value analysis.
+          - paragraph [ref=e79]:
+            - emphasis [ref=e80]: Vision.
+            - text: "Fable 5 is the new state-of-the-art model for tasks involving vision. It can extract precise numbers from detailed scientific figures and can perform complex vision-based tasks like rebuilding a web app’s source code from screenshots alone. It also needs less scaffolding: for example, previous Claude models struggled to play Pokémon FireRed even with harnesses that gave them additional helpful tools, but Fable 5 beat FireRed with a minimal, vision-only harness."
+          - figure "A timelapse of Claude playing Pokémon FireRed from start to finish using only raw game screenshots — with no maps, navigation aids, or extra game-state information. Earlier Claude models needed a complex helper harness to play Pokémon; Claude Fable 5 completed the game with vision alone." [ref=e83]:
+            - generic [ref=e84]: A timelapse of Claude playing Pokémon FireRed from start to finish using only raw game screenshots — with no maps, navigation aids, or extra game-state information. Earlier Claude models needed a complex helper harness to play Pokémon; Claude Fable 5 completed the game with vision alone.
+          - paragraph [ref=e85]:
+            - emphasis [ref=e86]: Memory and long-context.
+            - text: Fable 5 stays focused across millions of tokens in long-running tasks and improves its outputs using its own notes. When we had the model play the deck-building game
+            - link "Slay the Spire" [ref=e87] [cursor=pointer]:
+              - /url: https://en.wikipedia.org/wiki/Slay_the_Spire
+              - emphasis [ref=e88]: Slay the Spire
+            - text: ", giving it access to persistent file-based memory improved its performance three times more than for Opus 4.8; Fable also reached the game’s final act three times more often."
+          - generic [ref=e90]:
+            - tablist "Media carousel tabs" [ref=e91]:
+              - tab "Solar eclipses" [selected] [ref=e92] [cursor=pointer]
+              - tab "Factorio" [ref=e93] [cursor=pointer]
+              - tab "VibeCAD" [ref=e94] [cursor=pointer]
+              - tab "Fluid with Classical EDM" [ref=e95] [cursor=pointer]
+            - tabpanel [ref=e97]:
+              - figure "Claude Fable 5 built this simulation of the solar system, deriving the planets' orbital motion from physics first principles and using it to predict solar eclipses." [ref=e99]:
+                - generic [ref=e100]: Claude Fable 5 built this simulation of the solar system, deriving the planets' orbital motion from physics first principles and using it to predict solar eclipses.
+          - paragraph [ref=e101]:
+            - emphasis [ref=e102]: "Drug design:"
+            - text: "Using Mythos 5, our internal protein design experts accelerated aspects of the drug design process by around ten times. In one example, they found that Mythos 5, with protein design and bioinformatics tools but no human assistance, matches or beats skilled human operators. In doing so, the model executes all of the tasks that are normally completed by a scientist: choosing binding sites, selecting and running protein design tools, and recovering from failures along the way. Nine of the 14 protein targets from this study (shown below) yielded strong candidates for drug design that we’re currently investigating."
+          - figure "Protein complexes designed by Mythos 5. Targets include immune checkpoints, growth-factor and receptor signaling, neurodegeneration, muscle disease, and harder structural targets." [ref=e104]:
+            - img [ref=e105]
+            - emphasis [ref=e107]: Protein complexes designed by Mythos 5. Targets include immune checkpoints, growth-factor and receptor signaling, neurodegeneration, muscle disease, and harder structural targets.
+          - paragraph [ref=e108]:
+            - emphasis [ref=e109]: Novel hypotheses in molecular biology.
+            - text: Mythos 5 is our first model to consistently produce novel, compelling scientific hypotheses. In blinded head-to-head comparisons against Opus-class models, our scientists preferred Mythos’s molecular biology hypotheses ~80% of the time, and have advanced several to experimental evaluation. In the meantime, one Mythos hypothesis—a novel mechanism for an
+            - emphasis [ref=e110]: E. coli
+            - text: protein—was corroborated in
+            - link "a study" [ref=e111] [cursor=pointer]:
+              - /url: https://www.biorxiv.org/content/10.64898/2026.03.12.711259v1
+            - text: from a lab independently working on the same problem.
+          - paragraph [ref=e112]:
+            - emphasis [ref=e113]: Novel research in genomics.
+            - strong [ref=e114]
+            - text: Mythos 5 conducted novel genomics research in over a week of largely autonomous work. It assembled single-cell data for millions of cells spanning 138 animal species and designed and trained a custom machine learning model to identify cells performing the same role in even distantly related organisms. With only high-level human input, Mythos 5’s trained model outperformed a recent model published in the journal
+            - emphasis [ref=e115]: Science
+            - text: —despite being 100 times smaller. We intend to publish these results in the coming months.
+          - paragraph [ref=e116]:
+            - emphasis [ref=e117]: Alignment
+            - text: . In our automated alignment assessment we found that Mythos 5’s level of misaligned behavior (including misaligned actions taken by the model such as deception, and cooperation with misuse of the model by a user) was low, and similar to that of Opus 4.8. Given they are the same underlying model, Fable 5’s level of alignment will be similar. The assessment is described in full, along with a detailed suite of other safety and capabilities tests, in the model’s
+            - link "system card" [ref=e118] [cursor=pointer]:
+              - /url: https://anthropic.com/claude-fable-5-mythos-5-system-card
+            - text: .
+          - figure "Overall level of misaligned behaviors from our automated alignment assessment. See section 6.2.3.1 of the system card for more." [ref=e120]:
+            - img [ref=e121]
+            - emphasis [ref=e123]:
+              - text: Overall level of misaligned behaviors from our automated alignment assessment. See section 6.2.3.1 of the
+              - link "system card" [ref=e124] [cursor=pointer]:
+                - /url: https://anthropic.com/claude-fable-5-mythos-5-system-card
+              - text: for more.
+          - heading "Early feedback for Claude Fable 5" [level=2] [ref=e125]
+          - paragraph [ref=e126]: "Customers with early access ran their own tests on Fable 5. Below, in their words, is a selection of what they’re seeing:"
+          - generic [ref=e128]:
+            - generic [ref=e130]:
+              - generic [ref=e131]:
+                - generic [ref=e132]:
+                  - img "logo"
+                - img [ref=e134]
+                - blockquote [ref=e136]:
+                  - generic [ref=e137]: Claude Fable 5 is the state of the art model on CursorBench. It's opened up a class of long-horizon problems that were out of reach for earlier models.
+                  - generic [ref=e139]:
+                    - text: Michael Truell
+                    - text: CEO and Co-founder
+              - generic [ref=e140]:
+                - generic [ref=e141]:
+                  - img "logo"
+                - img [ref=e143]
+                - blockquote [ref=e145]:
+                  - generic [ref=e146]: "Claude Fable 5 is a real step forward for the developers GitHub serves. In our early testing, it took on complex, long-horizon coding tasks with a level of autonomy and reliability that exceeded previous benchmarks. But what excites us most is the direction it points: a future where developers can hand increasingly ambitious work to agents and trust the results across the software lifecycle."
+                  - generic [ref=e148]:
+                    - text: Mario Rodriguez
+                    - text: Chief Product Officer
+              - generic [ref=e149]:
+                - generic [ref=e150]:
+                  - img "logo"
+                - img [ref=e152]
+                - blockquote [ref=e154]:
+                  - generic [ref=e155]: These are the strongest results of any Claude model we've had the opportunity to test. Claude Fable 5 is a clear step forward on agentic coding and prototyping.
+                  - generic [ref=e157]:
+                    - text: Matt Colyer
+                    - text: Director of Product, Developers
+              - generic [ref=e158]:
+                - generic [ref=e159]:
+                  - img "logo"
+                - img [ref=e161]
+                - blockquote [ref=e163]:
+                  - generic [ref=e164]: Claude Fable 5's reasoning is a clear step beyond Opus 4.8. It works at senior research scientist grade — picking directions, allocating resources, killing its incorrect beliefs, and producing novel first-principles outputs.
+                  - generic [ref=e166]:
+                    - text: Sean Ward
+                    - text: CEO and Co-founder
+              - generic [ref=e167]:
+                - generic [ref=e168]:
+                  - img "logo"
+                - img [ref=e170]
+                - blockquote [ref=e172]:
+                  - generic [ref=e173]: Claude Fable 5 understands what builders mean, not just what they type. Apps that took a hundred prompts a year ago, it now one-shots. When a customer really hits a wall, it's the model we reach for to get them past it quickly, so they can finish what they set out to build.
+                  - generic [ref=e175]:
+                    - text: Fabian Hedin
+                    - text: CTO & Co-founder
+              - generic [ref=e176]:
+                - generic [ref=e177]:
+                  - img "logo"
+                - img [ref=e179]
+                - blockquote [ref=e181]:
+                  - generic [ref=e182]: Claude Fable 5 feels materially different. In blind review, our lawyers found its redlines matched or beat our current model every time.
+                  - generic [ref=e184]:
+                    - text: Aveek Duttagupta
+                    - text: Member of Technical Staff
+              - generic [ref=e185]:
+                - generic [ref=e186]:
+                  - img "logo"
+                - img [ref=e188]
+                - blockquote [ref=e190]:
+                  - generic [ref=e191]: At the highest effort, Claude Fable 5 reflects on and validates its own work. For us, that's what makes highly autonomous operations possible — the extra thinking pays for itself.
+                  - generic [ref=e193]:
+                    - text: Yusuke Kaji
+                    - text: GM, AI for Business
+              - generic [ref=e194]:
+                - generic [ref=e195]:
+                  - img "logo"
+                - img [ref=e197]
+                - blockquote [ref=e199]:
+                  - generic [ref=e200]: Claude Fable 5 delivers more capable engineering in fewer turns than prior models — handling the complex multi-agent workflows our employees run daily in Claude Code.
+                  - generic [ref=e202]:
+                    - text: Luke Anderson
+                    - text: CTO
+              - generic [ref=e203]:
+                - generic [ref=e204]:
+                  - img "logo"
+                - img [ref=e206]
+                - blockquote [ref=e208]:
+                  - generic [ref=e209]: Claude Fable 5 is the highest-scoring model on FrontierBench, Cognition's frontier coding eval. It excels at long-horizon reasoning and generalizes to unfamiliar tools out of the box.
+                  - generic [ref=e211]:
+                    - text: Scott Wu
+                    - text: CEO
+              - generic [ref=e212]:
+                - generic [ref=e213]:
+                  - img "logo"
+                - img [ref=e215]
+                - blockquote [ref=e217]:
+                  - generic [ref=e218]: Claude Fable 5 is the strongest finance-first model we've tested, both on general finance and reasoning. It's a notable step up.
+                  - generic [ref=e220]:
+                    - text: Damian Miraglia
+                    - text: Principal Engineer, Applied AI
+              - generic [ref=e221]:
+                - generic [ref=e222]:
+                  - img "logo"
+                - img [ref=e224]
+                - blockquote [ref=e226]:
+                  - generic [ref=e227]: Claude Fable 5 is the first to break 90% on our core analytics benchmark of complex, long-running analytical tasks — a 10-point jump over Opus. On the hardest questions, it shows strong judgment and attention to nuance.
+                  - generic [ref=e229]:
+                    - text: Izzy Miller
+                    - text: AI Research Lead
+              - generic [ref=e230]:
+                - generic [ref=e231]:
+                  - img "logo"
+                - img [ref=e233]
+                - blockquote [ref=e235]:
+                  - generic [ref=e236]: Claude Fable 5 is the strongest model we've tested on frontier physics research while using a third of the reasoning tokens. In 36 hours it got nearly to where GPT-5.5 landed after four days.
+                  - generic [ref=e238]:
+                    - text: Matthew Pines
+                    - text: CEO
+              - generic [ref=e239]:
+                - generic [ref=e240]:
+                  - img "logo"
+                - img [ref=e242]
+                - blockquote [ref=e244]:
+                  - generic [ref=e245]: On ViBench, our end-to-end vibe-coding benchmark, Claude Fable 5 is the highest-performing model we've tested — nearly saturating our base use cases and building apps in less time with fewer tokens.
+                  - generic [ref=e247]:
+                    - text: Michele Catasta
+                    - text: President & Head of AI
+              - generic [ref=e248]:
+                - generic [ref=e249]:
+                  - img "logo"
+                - img [ref=e251]
+                - blockquote [ref=e253]:
+                  - generic [ref=e254]: Claude Fable 5 beats Opus 4.8 on our everyday spreadsheet suite at every effort level — and it does it with fewer turns, finishing runs 25–30% faster.
+                  - generic [ref=e256]:
+                    - text: Peter Wang
+                    - text: Chief Science Officer
+            - generic [ref=e257]:
+              - generic [ref=e258]: 01 / 14
+              - generic [ref=e259]:
+                - button "Previous quote" [disabled] [ref=e260] [cursor=pointer]:
+                  - img [ref=e261]
+                - button "Next quote" [ref=e263] [cursor=pointer]:
+                  - img [ref=e264]
+          - heading "Claude Fable 5’s new safeguards" [level=2] [ref=e266]
+          - paragraph [ref=e267]:
+            - text: Mythos-class models have reached a threshold where they present significant risks. In April we began
+            - link "Project Glasswing" [ref=e268] [cursor=pointer]:
+              - /url: https://www.anthropic.com/glasswing
+            - text: ", releasing the first Mythos-class model (Claude Mythos Preview) to only a limited group of cyber defenders and critical software infrastructure providers. When we did so, we stated that we hoped to eventually release"
+            - link "Mythos-level capabilities to all our users" [ref=e269] [cursor=pointer]:
+              - /url: https://www.anthropic.com/glasswing#:~:text=We%20do%20not,Preview3.
+            - text: ", so long as we had developed new safeguards that were strong enough to reliably prevent misuse."
+          - paragraph [ref=e270]: Over the past few months we have been improving these safeguards, and they are now robust enough for a general release. Because we have prioritized safety, we’ve deliberately tuned the safeguards to be cautious, and they are still stricter than would be ideal—for example, sometimes benign requests will trigger our classifiers. We recognize that this will be frustrating to some users, and our aim is to reduce false positives as we update and refine the safeguards after launch.
+          - paragraph [ref=e271]:
+            - text: Below we discuss each of Fable 5’s new safeguards in turn. Our wider suite of safeguards is discussed and evaluated in the model’s
+            - link "system card" [ref=e272] [cursor=pointer]:
+              - /url: https://anthropic.com/claude-fable-5-mythos-5-system-card
+            - text: and our most recent
+            - link "risk report" [ref=e273] [cursor=pointer]:
+              - /url: https://cdn.sanity.io/files/4zrzovbb/website/097c63b5fe7dd8b14866e1f15bb1910ec713658a.pdf
+            - text: .
+          - heading "Safety classifiers" [level=3] [ref=e274]
+          - paragraph [ref=e275]:
+            - text: The frontier cybersecurity and research biology capabilities of Mythos-class models mean that they pose a substantial risk of
+            - emphasis [ref=e276]: uplift
+            - text: "to malicious actors. That is, these models could provide information or advice that assists those actors in causing serious harm that they couldn’t have received from other sources (for example, from internet search engines). Furthermore, a great deal of advanced usage of AI models is dual use: the same queries that are beneficial in the hands of cybersecurity professionals and biology researchers could be dangerous if available to malicious actors."
+          - paragraph [ref=e277]: We therefore need strong safeguards to prevent misuse, and their coverage needs to be broad. The safeguards themselves have to stand up to sustained and sophisticated attempts to bypass them (also known as “jailbreaking” the system). The uplift from Mythos-level capabilities is valuable to many adversaries—for instance, those who could financially gain from cyberattacks—and we therefore expect them to be motivated to try to circumvent our safety measures.
+          - paragraph [ref=e278]:
+            - text: Fable 5 comes with a new set of
+            - emphasis [ref=e279]: classifiers
+            - text: ": separate AI systems that detect potential misuse, including jailbreak attempts, and prevent the main model (in this case Fable 5) from responding. We’ve been running classifiers on our models"
+            - link "for some time" [ref=e280] [cursor=pointer]:
+              - /url: https://www.anthropic.com/research/next-generation-constitutional-classifiers
+            - text: ", and Fable 5’s classifiers are an extension of this previous work with extra coverage."
+          - paragraph [ref=e281]: "When Fable’s classifiers detect a request related to cybersecurity, biology and chemistry, or distillation, the response is automatically handled by Claude Opus 4.8 instead. Users will be informed whenever this occurs. Opus 4.8 is a highly capable model in its own right: a response that falls back to Opus is a far better experience than an outright refusal from Fable. Our early data shows that more than 95% of Fable sessions involve no fallback at all—for those sessions, Fable 5’s performance is effectively the same as that of Mythos 5."
+          - paragraph [ref=e282]: "The following are the areas covered by the classifiers:"
+          - paragraph [ref=e283]:
+            - emphasis [ref=e284]: 1. Cybersecurity
+            - text: . Mythos-class models
+            - link "excel" [ref=e285] [cursor=pointer]:
+              - /url: https://red.anthropic.com/2026/mythos-preview/
+            - text: at discovering and exploiting software vulnerabilities. They can thus make cyberattacks substantially easier and cheaper to commit. Mythos-class models also show strong skills in agentic hacking. This involves performing multiple different parts of a cyberattack in addition to finding exploits—reconnaissance, discovery, lateral movement, and more. To prevent these agentic hacking skills providing uplift in cyberattacks, we designed our cybersecurity classifiers to cover both exploitation and offensive cyber tasks in a broader sense. As shown in the graph below, our classifiers prevent Fable from making any progress on these tasks.
+          - figure "Results of running cyber evaluations,3 with Fable 5 in a mode that blocks responses rather than falling back to Opus 4.8. Evaluations did not involve attempts to evade safeguards." [ref=e287]:
+            - img [ref=e288]
+            - emphasis [ref=e290]:
+              - text: Results of running cyber evaluations,
+              - superscript [ref=e291]: "3"
+              - text: with Fable 5 in a mode that blocks responses rather than falling back to Opus 4.8. Evaluations did not involve attempts to evade safeguards.
+          - paragraph [ref=e292]:
+            - text: We extensively red-teamed our classifiers to test their robustness against jailbreaks. As well as internal testing, we ran an external bug bounty that produced no universal jailbreaks in over 1,000 hours of testing. External red-teaming organizations we engaged also failed to find any universal jailbreaks on long-form agentic tasks so far—although the UK AISI has made progress towards one within a brief initial testing window.
+            - superscript [ref=e293]: "4"
+            - text: It is likely impossible to
+            - emphasis [ref=e294]: completely
+            - text: prevent universal jailbreaks, but our goal is to make any remaining jailbreaks sufficiently slow and costly that we can detect and prevent them before they are used at scale.
+          - paragraph [ref=e295]: "The graph below, from one of our internal evaluations, illustrates how Fable 5’s safeguards give it greater resistance to jailbreaks than our previous generally accessible models:"
+          - figure "Results of an internal evaluation in which an automated red-teamer tries to use the model to complete a short task related to offensive cybersecurity across 400 turns, restarting and rewinding when blocked. The tasks are mostly simple and not representative of real cyber usage—they are sometimes as simple as encrypting files on a remote server. On more complex and realistic tasks we have not yet seen successful jailbreaks on our production system. Note that Opus 4.6 does not have blocking cyber safeguards." [ref=e297]:
+            - img [ref=e298]
+            - emphasis [ref=e300]: Results of an internal evaluation in which an automated red-teamer tries to use the model to complete a short task related to offensive cybersecurity across 400 turns, restarting and rewinding when blocked. The tasks are mostly simple and not representative of real cyber usage—they are sometimes as simple as encrypting files on a remote server. On more complex and realistic tasks we have not yet seen successful jailbreaks on our production system. Note that Opus 4.6 does not have blocking cyber safeguards.
+          - paragraph [ref=e301]: One of our external partners found that Fable 5’s safeguards against harmful cyber queries were the most robust of any model tested (including Opus 4.8 and Opus 4.7). Fable 5 complied with zero harmful single-turn requests relating to planning a cyberattack, exploit development, or defense evasion. This held whether or not one of the requests used any of 30 different public jailbreak techniques.
+          - paragraph [ref=e302]:
+            - emphasis [ref=e303]: 2. Biology and chemistry.
+            - text: We have long used
+            - link "our classifiers" [ref=e304] [cursor=pointer]:
+              - /url: https://www.anthropic.com/news/activating-asl3-protections
+            - text: "to block our models from responding on a narrow selection of bioweapons-related queries. But we are no longer certain that blocking this narrow selection is enough. This is for two reasons: first, we have reason for concern about well-resourced malicious actors attempting to gain uplift from our models for highly risky biological research. Second, models now have a greater ability to accomplish real-world scientific tasks."
+          - paragraph [ref=e305]:
+            - text: For example, we tested Mythos 5’s ability to complete a challenging step in designing
+            - link "adeno-associated viruses" [ref=e306] [cursor=pointer]:
+              - /url: https://en.wikipedia.org/wiki/Adeno-associated_virus
+            - text: (AAVs). AAVs are a component for delivering gene therapies, but the same capability, in the wrong hands, could enable the design of dangerous viruses. In this task, various AI models were evaluated on their ability to predict how a genetic modification would impact the assembly of the virus’s outer shell (among a set of therapeutically-relevant unpublished candidates developed by
+            - link "Dyno Therapeutics" [ref=e307] [cursor=pointer]:
+              - /url: https://www.dynotx.com/
+            - text: ). We did not explicitly train our models to perform this task—and yet Mythos-class models outperformed sophisticated models dedicated to protein tasks (known as “protein language models”) using their biological reasoning alone. This demonstrates a promising ability to complete simple but important tasks in gene therapy research and development—but also highlights the risk posed by such dual-use capabilities.
+          - figure "Results of an evaluation in which our models predicted the unpublished experimental properties of the viral shell of a simple virus. Viral shell assembly is the simplest viral trait to predict in this context, but it is nonetheless an important property to get right when designing more complex features. AAV = adeno-associated virus." [ref=e309]:
+            - img [ref=e310]
+            - emphasis [ref=e312]: Results of an evaluation in which our models predicted the unpublished experimental properties of the viral shell of a simple virus. Viral shell assembly is the simplest viral trait to predict in this context, but it is nonetheless an important property to get right when designing more complex features. AAV = adeno-associated virus.
+          - paragraph [ref=e313]: "Our priority was to safely release Fable as soon as we could, even at the cost of overly broad safeguards. Therefore, for the time being we have arranged for Fable to fall back to Opus 4.8 on most requests related to biology and chemistry. As with all of our classifiers, we hope to narrow these safeguards as soon as possible: as can be seen from the evidence above, there is great potential for positive applications of Fable for science, and we do not want false positives from our classifiers to get in the way. In the coming weeks, some biomedical researchers and companies will be able to join our trusted access program for biology capabilities in Mythos 5 (discussed below)."
+          - paragraph [ref=e314]:
+            - emphasis [ref=e315]: 3. Distillation
+            - text: . We’ve previously identified
+            - link "large-scale attempts" [ref=e316] [cursor=pointer]:
+              - /url: https://www.anthropic.com/news/detecting-and-preventing-distillation-attacks
+            - text: to extract (“distill”) Claude’s capabilities to train
+            - link "competing" [ref=e317] [cursor=pointer]:
+              - /url: https://www.anthropic.com/legal/commercial-terms
+            - text: models in authoritarian countries. Distillation of Fable 5’s abilities could indirectly lead to the proliferation of near-frontier AI capabilities—and these could be released without the appropriate safeguards. Requests that are flagged by our classifiers as being part of such distillation attempts will fall back to Opus 4.8.
+          - heading "A new data retention policy" [level=3] [ref=e318]
+          - paragraph [ref=e319]:
+            - text: Finally, we’re making a change to the way we handle business customer data for Fable 5, Mythos 5, and future models with similar or higher capability levels. We will require 30-day retention for all traffic on Mythos-class models, on both first- and third-party surfaces. We won’t use this data to train new Claude models, or for any non-safety-related purpose, and we’ve instituted new privacy protections including logging all human access to the data and ensuring its deletion after 30 days in almost all cases (see
+            - link "this post" [ref=e320] [cursor=pointer]:
+              - /url: https://support.claude.com/en/articles/15425996
+            - text: for further details). The data will help us defend against complex and novel attacks (including new jailbreaks and attacks that operate across many requests) as well as help us identify and reduce false positives.
+          - heading "Claude Mythos 5 and the trusted access program" [level=2] [ref=e321]
+          - paragraph [ref=e322]: Beginning today, all users who currently have access to Claude Mythos Preview (for example, our cybersecurity partners in Project Glasswing) will be able to upgrade to Claude Mythos 5—the same model as Claude Fable 5 but with cyber safeguards lifted. Users will find Mythos 5 comparable to, or somewhat stronger than, Mythos Preview in most cases, while costing substantially less.
+          - paragraph [ref=e323]:
+            - text: In consultation with the US government, we plan to steadily expand access to Claude Mythos 5, continuing our
+            - link "periodic addition" [ref=e324] [cursor=pointer]:
+              - /url: https://www.anthropic.com/news/expanding-project-glasswing
+            - text: of new partners, as well as pursuing a trusted access program that allows cybersecurity organizations to apply in a more systematic manner.
+          - paragraph [ref=e325]: Our plans also include opening a trusted access program for biology, to help accelerate biomedical research and discover new therapies with Mythos-class capabilities. This program will provide access to Fable 5 with the biology and chemistry safeguards removed (but the cyber safeguards still in place). It will enroll a small number of researchers from a variety of life science organizations spanning fundamental and translational research; we’re planning to expand access to this program while simultaneously making our safeguards better.
+          - heading "Availability" [level=2] [ref=e326]
+          - paragraph [ref=e327]: Claude Fable 5 is available everywhere today. Claude Mythos 5 is restricted to Glasswing partners (with cyber safeguards lifted) and soon to select biology researchers (with biology and chemistry safeguards lifted) only, until our broader trusted access program is available.
+          - paragraph [ref=e328]:
+            - text: Pricing for both models is $10 per million input tokens and $50 per million output tokens. Developers can use claude-fable-5 via the
+            - link "Claude API" [ref=e329] [cursor=pointer]:
+              - /url: https://platform.claude.com/docs/en/about-claude/models/overview
+            - text: .
+          - paragraph [ref=e330]: "We expect demand for Fable 5 to be very high, and difficult to predict. On the Claude API and consumption-based Enterprise plans, Fable 5 is fully available from today. For subscription plans, we’d rather give access sooner than later, so we’re rolling out more conservatively, in stages:"
+          - list [ref=e331]:
+            - listitem [ref=e332]: From today through June 22, Fable 5 is included on Pro, Max, Team, and seat-based Enterprise plans at no extra cost.
+            - listitem [ref=e333]:
+              - text: On June 23, we’ll remove Fable 5 from those plans. Using it after that will require
+              - link "usage credits" [ref=e334] [cursor=pointer]:
+                - /url: https://support.claude.com/en/articles/12429409-manage-usage-credits-for-paid-claude-plans
+              - text: . If capacity allows, we’ll extend the included window.
+            - listitem [ref=e335]: After this point—when sufficient capacity allows us to do so—we aim to restore Fable 5 as a standard part of subscription plans. We intend to do this as quickly as we can.
+          - paragraph [ref=e336]: Throughout this period, we’ll communicate any changes ahead of time so users know where things stand.
+          - paragraph
+          - paragraph [ref=e337]:
+            - emphasis [ref=e338]: "Edit June 9, 2026: Updated the discussion of AAVs to note that the candidates were developed by Dyno Therapeutics."
+      - generic [ref=e339]:
+        - generic [ref=e340]:
+          - heading "Footnotes" [level=4] [ref=e341]
+          - list [ref=e342]:
+            - listitem [ref=e343]:
+              - text: Mythos-class models are a tier of Claude models that sit above our Opus class in capability. The first, Claude Mythos Preview, was released in April through
+              - link "Project Glasswing" [ref=e344] [cursor=pointer]:
+                - /url: https://www.anthropic.com/glasswing
+              - text: . That is followed today by Claude Fable 5 and Claude Mythos 5.
+            - listitem [ref=e345]:
+              - text: Fable is from the Latin
+              - emphasis [ref=e346]: fabula
+              - text: ", “that which is told,” akin to the Greek"
+              - emphasis [ref=e347]: mythos
+              - text: . The safeguards are what distinguish the two models (Fable and Mythos) and are why we’ve given them different names.
+            - listitem [ref=e348]: "Metrics: Firefox = fraction of trials achieving arbitrary code execution (the exploit's full-success tier). OSS-Fuzz = severity-weighted mean of the five-tier score (0.2 crash → 1.0 control-flow hijack), so values are a weighted average rather than a success rate. CyberGym = fraction reproducing the target vulnerability (the public leaderboard metric). CyScenarioBench = success rate averaged equally across its challenges."
+            - listitem [ref=e349]: A universal jailbreak can be defined as any prompt, script, or harness that allows a user to interact with a model as if its safeguards were not present. This is opposed to more minor jailbreaks that are only effective in very limited contexts or require additional effort to be adapted to each new situation.
+        - generic [ref=e350]:
+          - link "Share on Twitter" [ref=e351] [cursor=pointer]:
+            - /url: https://twitter.com/intent/tweet?text=https://www.anthropic.com/news/claude-fable-5-mythos-5
+            - img [ref=e352]
+          - link "Share on LinkedIn" [ref=e354] [cursor=pointer]:
+            - /url: https://www.linkedin.com/shareArticle?mini=true&url=https://www.anthropic.com/news/claude-fable-5-mythos-5
+            - img [ref=e355]
+      - generic [ref=e358]:
+        - heading "Related content" [level=2] [ref=e360]
+        - generic [ref=e362]:
+          - generic [ref=e363]:
+            - heading "Introducing the Services Track and Partner Hub of the Claude Partner Network" [level=3] [ref=e364]
+            - link "Read more" [ref=e365] [cursor=pointer]:
+              - /url: /news/services-track-partner-hub
+              - generic [ref=e366]: Read more
+              - img [ref=e368]
+          - generic [ref=e370]:
+            - heading "What we learned mapping a year’s worth of AI-enabled cyber threats" [level=3] [ref=e371]
+            - paragraph [ref=e372]: As AI transforms the nature of and methods behind cyberattacks, how well do the techniques and frameworks used by the security community hold up? In a new report, we seek to answer that question.
+            - link "Read more" [ref=e373] [cursor=pointer]:
+              - /url: /news/AI-enabled-cyber-threats-mitre-attack
+              - generic [ref=e374]: Read more
+              - img [ref=e376]
+          - generic [ref=e378]:
+            - heading "Expanding Project Glasswing" [level=3] [ref=e379]
+            - paragraph [ref=e380]: We’re extending Project Glasswing to approximately 150 new organizations in more than fifteen countries.
+            - link "Read more" [ref=e381] [cursor=pointer]:
+              - /url: /news/expanding-project-glasswing
+              - generic [ref=e382]: Read more
+              - img [ref=e384]
+  - contentinfo "Site footer" [ref=e386]:
+    - generic [ref=e387]:
+      - link "Return to homepage" [ref=e389] [cursor=pointer]:
+        - /url: /
+        - img [ref=e390]
+      - navigation "Footer navigation" [ref=e392]:
+        - generic [ref=e393]:
+          - generic [ref=e394]:
+            - heading "Products" [level=3] [ref=e395]
+            - list [ref=e396]:
+              - listitem [ref=e397]:
+                - link "Claude" [ref=e398] [cursor=pointer]:
+                  - /url: https://claude.com/product/overview
+              - listitem [ref=e399]:
+                - link "Claude Code" [ref=e400] [cursor=pointer]:
+                  - /url: https://claude.com/product/claude-code
+              - listitem [ref=e401]:
+                - link "Claude Code Enterprise" [ref=e402] [cursor=pointer]:
+                  - /url: https://claude.com/product/claude-code/enterprise
+              - listitem [ref=e403]:
+                - link "Claude Cowork" [ref=e404] [cursor=pointer]:
+                  - /url: https://claude.com/product/cowork
+              - listitem [ref=e405]:
+                - link "Claude Security" [ref=e406] [cursor=pointer]:
+                  - /url: https://claude.com/product/claude-security
+              - listitem [ref=e407]:
+                - link "Claude for Chrome" [ref=e408] [cursor=pointer]:
+                  - /url: https://claude.com/chrome
+              - listitem [ref=e409]:
+                - link "Claude for Slack" [ref=e410] [cursor=pointer]:
+                  - /url: https://claude.com/claude-for-slack
+              - listitem [ref=e411]:
+                - link "Claude for Microsoft 365" [ref=e412] [cursor=pointer]:
+                  - /url: https://claude.com/claude-for-microsoft-365
+              - listitem [ref=e413]:
+                - link "Skills" [ref=e414] [cursor=pointer]:
+                  - /url: https://www.claude.com/skills
+              - listitem [ref=e415]:
+                - link "Download app" [ref=e416] [cursor=pointer]:
+                  - /url: https://claude.ai/download
+              - listitem [ref=e417]:
+                - link "Pricing" [ref=e418] [cursor=pointer]:
+                  - /url: https://claude.com/pricing
+              - listitem [ref=e419]:
+                - link "Log in to Claude" [ref=e420] [cursor=pointer]:
+                  - /url: https://claude.ai/
+          - generic [ref=e421]:
+            - heading "Models" [level=3] [ref=e422]
+            - list [ref=e423]:
+              - listitem [ref=e424]:
+                - link "Mythos" [ref=e425] [cursor=pointer]:
+                  - /url: https://www.anthropic.com/claude/mythos
+              - listitem [ref=e426]:
+                - link "Fable" [ref=e427] [cursor=pointer]:
+                  - /url: https://www.anthropic.com/claude/fable
+              - listitem [ref=e428]:
+                - link "Opus" [ref=e429] [cursor=pointer]:
+                  - /url: https://www.anthropic.com/claude/opus
+              - listitem [ref=e430]:
+                - link "Sonnet" [ref=e431] [cursor=pointer]:
+                  - /url: https://www.anthropic.com/claude/sonnet
+              - listitem [ref=e432]:
+                - link "Haiku" [ref=e433] [cursor=pointer]:
+                  - /url: https://www.anthropic.com/claude/haiku
+        - generic [ref=e434]:
+          - generic [ref=e435]:
+            - heading "Solutions" [level=3] [ref=e436]
+            - list [ref=e437]:
+              - listitem [ref=e438]:
+                - link "AI agents" [ref=e439] [cursor=pointer]:
+                  - /url: https://claude.com/solutions/agents
+              - listitem [ref=e440]:
+                - link "Code modernization" [ref=e441] [cursor=pointer]:
+                  - /url: https://claude.com/solutions/code-modernization
+              - listitem [ref=e442]:
+                - link "Coding" [ref=e443] [cursor=pointer]:
+                  - /url: https://claude.com/solutions/coding
+              - listitem [ref=e444]:
+                - link "Customer support" [ref=e445] [cursor=pointer]:
+                  - /url: https://claude.com/solutions/customer-support
+              - listitem [ref=e446]:
+                - link "Education" [ref=e447] [cursor=pointer]:
+                  - /url: https://claude.com/solutions/education
+              - listitem [ref=e448]:
+                - link "Enterprise" [ref=e449] [cursor=pointer]:
+                  - /url: https://claude.com/solutions/enterprise
+              - listitem [ref=e450]:
+                - link "Financial services" [ref=e451] [cursor=pointer]:
+                  - /url: https://claude.com/solutions/financial-services
+              - listitem [ref=e452]:
+                - link "Government" [ref=e453] [cursor=pointer]:
+                  - /url: https://claude.com/solutions/government
+              - listitem [ref=e454]:
+                - link "Healthcare" [ref=e455] [cursor=pointer]:
+                  - /url: https://claude.com/solutions/healthcare
+              - listitem [ref=e456]:
+                - link "Legal" [ref=e457] [cursor=pointer]:
+                  - /url: https://claude.com/solutions/legal
+              - listitem [ref=e458]:
+                - link "Life sciences" [ref=e459] [cursor=pointer]:
+                  - /url: https://claude.com/solutions/life-sciences
+              - listitem [ref=e460]:
+                - link "Nonprofits" [ref=e461] [cursor=pointer]:
+                  - /url: https://claude.com/solutions/nonprofits
+              - listitem [ref=e462]:
+                - link "Security" [ref=e463] [cursor=pointer]:
+                  - /url: https://claude.com/solutions/security
+              - listitem [ref=e464]:
+                - link "Small business" [ref=e465] [cursor=pointer]:
+                  - /url: https://claude.com/solutions/small-business
+              - listitem [ref=e466]:
+                - link "Startups" [ref=e467] [cursor=pointer]:
+                  - /url: https://claude.com/programs/startups
+          - generic [ref=e468]:
+            - heading "Claude Platform" [level=3] [ref=e469]
+            - list [ref=e470]:
+              - listitem [ref=e471]:
+                - link "Overview" [ref=e472] [cursor=pointer]:
+                  - /url: https://claude.com/platform/api
+              - listitem [ref=e473]:
+                - link "Developer docs" [ref=e474] [cursor=pointer]:
+                  - /url: https://platform.claude.com/docs
+              - listitem [ref=e475]:
+                - link "Pricing" [ref=e476] [cursor=pointer]:
+                  - /url: https://claude.com/pricing#api
+              - listitem [ref=e477]:
+                - link "Marketplace" [ref=e478] [cursor=pointer]:
+                  - /url: https://claude.com/platform/marketplace
+              - listitem [ref=e479]:
+                - link "Regional compliance" [ref=e480] [cursor=pointer]:
+                  - /url: https://claude.com/regional-compliance
+              - listitem [ref=e481]:
+                - link "Claude on AWS" [ref=e482] [cursor=pointer]:
+                  - /url: https://claude.com/partners/claude-on-aws
+              - listitem [ref=e483]:
+                - link "Google Cloud’s Vertex AI" [ref=e484] [cursor=pointer]:
+                  - /url: https://claude.com/partners/google-cloud-vertex-ai
+              - listitem [ref=e485]:
+                - link "Microsoft Foundry" [ref=e486] [cursor=pointer]:
+                  - /url: https://claude.com/partners/microsoft-foundry
+              - listitem [ref=e487]:
+                - link "Console login" [ref=e488] [cursor=pointer]:
+                  - /url: https://platform.claude.com/
+        - generic [ref=e489]:
+          - generic [ref=e490]:
+            - heading "Resources" [level=3] [ref=e491]
+            - list [ref=e492]:
+              - listitem [ref=e493]:
+                - link "Blog" [ref=e494] [cursor=pointer]:
+                  - /url: https://claude.com/blog
+              - listitem [ref=e495]:
+                - link "Claude partner network" [ref=e496] [cursor=pointer]:
+                  - /url: https://claude.com/partners
+              - listitem [ref=e497]:
+                - link "Community" [ref=e498] [cursor=pointer]:
+                  - /url: https://claude.com/community
+              - listitem [ref=e499]:
+                - link "Connectors" [ref=e500] [cursor=pointer]:
+                  - /url: https://claude.com/connectors
+              - listitem [ref=e501]:
+                - link "Courses" [ref=e502] [cursor=pointer]:
+                  - /url: /learn
+              - listitem [ref=e503]:
+                - link "Customer stories" [ref=e504] [cursor=pointer]:
+                  - /url: https://claude.com/customers
+              - listitem [ref=e505]:
+                - link "Engineering at Anthropic" [ref=e506] [cursor=pointer]:
+                  - /url: /engineering
+              - listitem [ref=e507]:
+                - link "Events" [ref=e508] [cursor=pointer]:
+                  - /url: /events
+              - listitem [ref=e509]:
+                - link "Inside Claude Code" [ref=e510] [cursor=pointer]:
+                  - /url: /product/claude-code
+              - listitem [ref=e511]:
+                - link "Inside Claude Cowork" [ref=e512] [cursor=pointer]:
+                  - /url: /product/claude-cowork
+              - listitem [ref=e513]:
+                - link "Inside Claude Enterprise" [ref=e514] [cursor=pointer]:
+                  - /url: /product/enterprise
+              - listitem [ref=e515]:
+                - link "Inside Claude Security" [ref=e516] [cursor=pointer]:
+                  - /url: /product/security
+              - listitem [ref=e517]:
+                - link "Plugins" [ref=e518] [cursor=pointer]:
+                  - /url: https://claude.com/plugins
+              - listitem [ref=e519]:
+                - link "Powered by Claude" [ref=e520] [cursor=pointer]:
+                  - /url: https://claude.com/partners/powered-by-claude
+              - listitem [ref=e521]:
+                - link "Service partners" [ref=e522] [cursor=pointer]:
+                  - /url: https://claude.com/partners/services
+              - listitem [ref=e523]:
+                - link "Tutorials" [ref=e524] [cursor=pointer]:
+                  - /url: https://claude.com/resources/tutorials
+              - listitem [ref=e525]:
+                - link "Use cases" [ref=e526] [cursor=pointer]:
+                  - /url: https://claude.com/resources/use-cases
+          - generic [ref=e527]:
+            - heading "Help and security" [level=3] [ref=e528]
+            - list [ref=e529]:
+              - listitem [ref=e530]:
+                - link "Availability" [ref=e531] [cursor=pointer]:
+                  - /url: https://www.anthropic.com/supported-countries
+              - listitem [ref=e532]:
+                - link "Status" [ref=e533] [cursor=pointer]:
+                  - /url: https://status.anthropic.com/
+              - listitem [ref=e534]:
+                - link "Support center" [ref=e535] [cursor=pointer]:
+                  - /url: https://support.claude.com/en/
+        - generic [ref=e536]:
+          - generic [ref=e537]:
+            - heading "Company" [level=3] [ref=e538]
+            - list [ref=e539]:
+              - listitem [ref=e540]:
+                - link "Anthropic" [ref=e541] [cursor=pointer]:
+                  - /url: /company
+              - listitem [ref=e542]:
+                - link "Careers" [ref=e543] [cursor=pointer]:
+                  - /url: /careers
+              - listitem [ref=e544]:
+                - link "Policy" [ref=e545] [cursor=pointer]:
+                  - /url: /policy
+              - listitem [ref=e546]:
+                - link "Economic Futures" [ref=e547] [cursor=pointer]:
+                  - /url: /economic-futures
+              - listitem [ref=e548]:
+                - link "Research" [ref=e549] [cursor=pointer]:
+                  - /url: /research
+              - listitem [ref=e550]:
+                - link "News" [ref=e551] [cursor=pointer]:
+                  - /url: /news
+              - listitem [ref=e552]:
+                - link "Claude’s Constitution" [ref=e553] [cursor=pointer]:
+                  - /url: /constitution
+              - listitem [ref=e554]:
+                - link "Policy on the AI Exponential" [ref=e555] [cursor=pointer]:
+                  - /url: /policy-on-the-ai-exponential
+              - listitem [ref=e556]:
+                - link "Responsible Scaling Policy" [ref=e557] [cursor=pointer]:
+                  - /url: https://www.anthropic.com/news/announcing-our-updated-responsible-scaling-policy
+              - listitem [ref=e558]:
+                - link "Security and compliance" [ref=e559] [cursor=pointer]:
+                  - /url: https://trust.anthropic.com/
+              - listitem [ref=e560]:
+                - link "Transparency" [ref=e561] [cursor=pointer]:
+                  - /url: /transparency
+          - generic [ref=e562]:
+            - heading "Terms and policies" [level=3] [ref=e563]
+            - list [ref=e564]:
+              - listitem [ref=e565]:
+                - link "Privacy policy" [ref=e566] [cursor=pointer]:
+                  - /url: https://www.anthropic.com/legal/privacy
+              - listitem [ref=e567]:
+                - link "Consumer health data privacy policy" [ref=e568] [cursor=pointer]:
+                  - /url: https://www.anthropic.com/legal/consumer-health-data-privacy-policy
+              - listitem [ref=e569]:
+                - link "Responsible disclosure policy" [ref=e570] [cursor=pointer]:
+                  - /url: https://www.anthropic.com/responsible-disclosure-policy
+              - listitem [ref=e571]:
+                - 'link "Terms of service: Commercial" [ref=e572] [cursor=pointer]':
+                  - /url: https://www.anthropic.com/legal/commercial-terms
+              - listitem [ref=e573]:
+                - 'link "Terms of service: Consumer" [ref=e574] [cursor=pointer]':
+                  - /url: https://www.anthropic.com/legal/consumer-terms
+              - listitem [ref=e575]:
+                - link "Usage policy" [ref=e576] [cursor=pointer]:
+                  - /url: https://www.anthropic.com/legal/aup
+      - generic [ref=e577]:
+        - contentinfo [ref=e578]: © 2026 Anthropic PBC
+        - navigation "Social media links" [ref=e579]:
+          - listitem [ref=e580]:
+            - link "Visit our LinkedIn page" [ref=e581] [cursor=pointer]:
+              - /url: https://www.linkedin.com/company/anthropicresearch
+              - img [ref=e582]
+          - listitem [ref=e584]:
+            - link "Visit our X (formerly Twitter) profile" [ref=e585] [cursor=pointer]:
+              - /url: https://x.com/AnthropicAI
+              - img [ref=e586]
+          - listitem [ref=e588]:
+            - link "Visit our YouTube channel" [ref=e589] [cursor=pointer]:
+              - /url: https://www.youtube.com/@anthropic-ai
+              - img [ref=e590]
+  - alert [ref=e592]

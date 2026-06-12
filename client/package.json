@@ -1,0 +1,67 @@
+{
+  "name": "nexus-desktop",
+  "version": "0.1.0",
+  "description": "NEXUS Desktop — AI coding assistant with sandboxed agent",
+  "main": "dist-electron/main.js",
+  "private": true,
+  "type": "module",
+  "build": {
+    "appId": "com.nexus.desktop",
+    "productName": "NEXUS Desktop",
+    "directories": {
+      "output": "release"
+    },
+    "forceCodeSigning": false,
+    "files": [
+      "dist/**/*",
+      "dist-electron/**/*"
+    ],
+    "extraResources": [
+      {
+        "from": "../server/dist",
+        "to": "server/dist"
+      },
+      {
+        "from": "../server/package.json",
+        "to": "server/package.json"
+      }
+    ],
+    "win": {
+      "target": "nsis"
+    },
+    "mac": {
+      "target": "dmg"
+    },
+    "linux": {
+      "target": "AppImage"
+    }
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "electron:dev": "cd ../server && npm run build && cd ../client && vite",
+    "electron:build": "vite build && electron-builder",
+    "electron:pack": "cd ../server && npm run build && cd ../client && vite build && electron-builder"
+  },
+  "dependencies": {
+    "@element-plus/icons-vue": "^2.3.2",
+    "@iconify/vue": "^5.0.1",
+    "axios": "^1.13.6",
+    "element-plus": "^2.13.6",
+    "marked": "^18.0.2",
+    "vue": "^3.5.30"
+  },
+  "devDependencies": {
+    "@types/node": "^24.12.0",
+    "@vitejs/plugin-vue": "^6.0.4",
+    "electron": "^42.3.0",
+    "electron-builder": "^26.0.0",
+    "electron-packager": "^17.1.2",
+    "typescript": "~5.9.3",
+    "vite": "^8.0.0",
+    "vite-plugin-electron": "^1.0.0",
+    "vite-plugin-electron-renderer": "^1.0.0",
+    "vue-tsc": "^3.2.5"
+  }
+}

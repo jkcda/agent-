@@ -1,0 +1,13 @@
+node_modules/
+dist/
+dist-electron/
+release/
+release-pkg/
+release-v2/
+.env
+*.log
+data/
+workspace/
+uploads/
+*.jsonl
+.workspace-state.json
